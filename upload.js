@@ -12,9 +12,5 @@ function upload() {
     var caption = document.getElementById("caption");
     var myFile = document.getElementById("myFile");
 
-    $('#upload').onclick('submit',function())
-    client.putObject('images', function(error, data) {
-        return console.log(error, data)
-    })
 
 }
