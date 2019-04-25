@@ -9,13 +9,12 @@
 <body>
     <h1>Upload</h1>
 
-    <form action="upload.js" id="upload" method="POST">
-        <label id="caption">Caption: </label>
-        <input type="text" name="caption"><br/>
-        <input type="file" id="myFile" onclick="upload()" accept="images/jpeg, images/jpg, images/png"><br/>
-        <input type="submit" value="Submit"><br/>
+    <form id="upload" method="POST">
+        <label>Caption: </label>
+        <input type="text" name="caption" id="caption"><br/>
+        <input type="file" id="myFile"><br/>
+        <input type="submit" value="Submit" onclick="upload()"><br/>
     </form>
-    <p id="demo"></p>
 
     <script src="upload.js"></script>
     <script src="minio-browser.js"></script>
