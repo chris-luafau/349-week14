@@ -1,4 +1,3 @@
-
 // var client = new Minio.Client({
 //     endPoint: 'localhost',
 //     port: 9000,
@@ -28,13 +27,12 @@ let s3Client = new AWS.S3({
 //
 // }
 
-
 s3Client.putObject({
   Bucket: 'images',
   Key: file.name,
   Body: file,
   ContentLength: file.size,
   ContentType: file.type
-}, function(err, data) {
-    console.log(err, data)
+}, function (err, data) {
+  console.log(err, data)
 });
