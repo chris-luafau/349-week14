@@ -6,23 +6,14 @@
       "caption": "kitten"
     },
     {
-      "caption": {},
+      "caption": "test1",
       "src": "http://127.0.0.1:9000/images/Tuffix Background v3.3 1920x1080 - Jeffrey Lo.png",
       "id": 2
     },
     {
+      "caption": "test2",
       "src": "http://127.0.0.1:9000/images/Screenshot_2019-03-09_14-16-28.png",
       "id": 3
-    },
-    {
-      "caption": "",
-      "src": "http://127.0.0.1:9000/images/Tuffix Background v3.3 1920x1080 - Jeffrey Lo.png",
-      "id": 4
-    },
-    {
-      "caption": "testst",
-      "src": "http://127.0.0.1:9000/images/Screenshot_2019-03-09_14-16-28.png",
-      "id": 5
     }
   ]
 }
