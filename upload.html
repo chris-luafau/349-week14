@@ -3,20 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Upload</title>
 </head>
 <body>
-    <h1>Upload</h1>
 
-    <form action="http://localhost:3000/images" id="upload" method="POST">
-        <label>Caption: </label>
-        <input type="text" name="caption" id="caption"><br/>
-        <input type="file" id="myFile" accept="images/jpeg, images/jpg, images/png"><br/>
-        <input id="up" type="submit" value="Submit"><br/>
-    </form>
-    <p id="demo"></p>
+  <upload-form id="upload-form-template"></upload-form>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.447.0.min.js"></script>
     <script src="upload.js"></script>
 </body>
