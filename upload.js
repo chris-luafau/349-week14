@@ -9,11 +9,11 @@
 // });
 
 let s3Client = new AWS.S3({
-  endpoint: "http://127.0.0.1:9000",
+  endpoint: 'http://127.0.0.1:9000',
   s3ForcePathStyle: true,
-  signatureVersion: "v4",
-  accessKeyId: "BO6TYNVWT0ZU3JGRQPI7",
-  secretAccessKey: "uhrOBrLlL+qqfOmmceiLXS7I75isq2ZaEqPma+BL"
+  signatureVersion: 'v4',
+  accessKeyId: 'BO6TYNVWT0ZU3JGRQPI7',
+  secretAccessKey: 'uhrOBrLlL+qqfOmmceiLXS7I75isq2ZaEqPma+BL'
 
 });
 
@@ -30,7 +30,7 @@ let s3Client = new AWS.S3({
 
 
 s3Client.putObject({
-  Bucket: "images",
+  Bucket: 'images',
   Key: file.name,
   Body: file,
   ContentLength: file.size,
