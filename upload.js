@@ -1,38 +1,42 @@
-// var client = new Minio.Client({
-//     endPoint: 'localhost',
-//     port: 9000,
-//     useSSL: false,
-//     accessKey: 'BO6TYNVWT0ZU3JGRQPI7',
-//     secretKey: 'uhrOBrLlL+qqfOmmceiLXS7I75isq2ZaEqPma+BL'
-//
-// });
 
 let s3Client = new AWS.S3({
-  endpoint: 'http://127.0.0.1:9000',
+  endpoint: 'http://10.67.66.72:9000',
   s3ForcePathStyle: true,
   signatureVersion: 'v4',
-  accessKeyId: 'BO6TYNVWT0ZU3JGRQPI7',
-  secretAccessKey: 'uhrOBrLlL+qqfOmmceiLXS7I75isq2ZaEqPma+BL'
-
+  accessKeyId: 'E46VPBJX0SN08957WXP4',
+  secretAccessKey: '+APqL7BGwF4DkL3dQZ4T3Qbnr1eyQYh5k1KqFaPL'
 });
+/*
+function upload() {
+  var caption = document.getElementById("caption");
+  var file = document.getElementById("myFile").files[0];
+  let reader = new FileReader();
+  reader.readAsBinaryString(file);
 
-// function upload() {
-//     var caption = document.getElementById("caption");
-//     var myFile = document.getElementById("myFile");
-//     console.log(caption);
-//     console.log(myFile);
-//     client.putObject('images', caption, myFile, function(error, data) {
-//         return console.log(error, data);
-//     })
-//
-// }
-
-s3Client.putObject({
-  Bucket: 'images',
-  Key: file.name,
-  Body: file,
-  ContentLength: file.size,
-  ContentType: file.type
-}, function (err, data) {
-  console.log(err, data)
-});
+  console.log(caption);
+  console.log(myFile);
+  s3Client.putObject({
+    Bucket: 'images',
+    Key: file.name,
+    Body: file,
+    ContentLength: file.size,
+    ContentType: file.type
+  }, function(err, data) {
+    console.log(err, data)
+  });
+}
+*/
+document.getElementById('up').onclick = function () {
+  var file = document.getElementById("myFile").files[0];
+  let reader = new FileReader();
+  reader.readAsBinaryString(file);
+  s3Client.putObject({
+    Bucket: 'cat',
+    Key: file.name,
+    Body: file,
+    ContentLength: file.size,
+    ContentType: file.type
+  }, function(err, data) {
+    console.log(err, data)
+  });
+}
